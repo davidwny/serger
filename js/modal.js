@@ -266,7 +266,7 @@
 			// set up content for user bar code login
 			var content = '<p class="maint-label">Serger Keyboard Interface IP Address:</p>' +
 							'<input maxlength="15" placeholder="xxx.xxx.xxx.xxx" type="text" class="maint-input IP" id="WGC_0_sergerIP" value=' + localStorage.WGC_0_sergerIP + '>' + 
-							'<p class="maint-label">ROS Controller IP Address:</p>' + 
+							'<p class="maint-label">Robot Controller IP Address:</p>' + 
 							'<input type="text" placeholder="xxx.xxx.xxx.xxx" class="maint-input IP" id="WGC_0_rosIP" type="text" maxlength="15" value=' + localStorage.WGC_0_rosIP + '><div class="clearer"></div>' + 
 							'<button id="modal-enter" class="maint-enter" type="button" onclick="return false;">Enter</button><button id="modal-cancel">Cancel</button>';
 			

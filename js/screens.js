@@ -69,7 +69,6 @@ var screens = {
 			
 			// bind IP address
 			$('.button-1').click(function() {
-				audioClick.play();
 				modal.ipModal();
 			});
 			
@@ -82,7 +81,7 @@ var screens = {
 			});
 
 			// bind clock out
-			$('.button-4').unbind().click(function() {
+			$('.button-4').click(function() {
 				// clock out from maintenance
 
 				// update login info
