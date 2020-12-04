@@ -58,7 +58,26 @@
 	}
 	
 	button#modal-cancel {
+		height: 80px;
 		margin-left: 80px;
+		width: 140px;
+		font-size: 45px;
+		background-color: #ff0505;
+		border: #ff0505;
+		border-radius: 15px;
+	}
+	
+	button#modal-enter {
+		height: 80px;
+		width: 140px;
+		font-size: 45px;
+		background-color: #9cdc57;
+		border: #9cdc57;
+		border-radius: 15px;
+		box-shadow: 1px 1px 1px 1px gray;
+	}
+	button#modal-enter:active {
+		box-shadow: 2px 2px 1px 1px gray;
 	}
 	
 	button.maint-enter {
@@ -86,15 +105,17 @@
 	
 	p#wrapper-os {
 		text-align: left;
-		margin-left: 120px;
+		margin-left: 0px;
 	}
 	input.input-os {
-		margin-right: 5px;
+		margin-right: 20px;
 	}
 	label.label-os {
 		margin-right: 20px;
-		font-size: 26px;
+		font-size: 35px;
 		cursor: pointer;
+		line-height: 40px;
+		margin-bottom: 15px;
 	}
 		label.label-os.last {
 			margin-right: 0px;
