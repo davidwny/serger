@@ -108,7 +108,19 @@ var screens = {
 			// show user ID input
 			// focus to input...give instructions to scan barcode
 			$('.button-1').click(function() {
-				modal.showModalLogin();
+//				modal.showModalLogin();
+
+			$.ajax({
+				url: 'ros.exe',
+				dataType: 'json',
+				method: 'POST',
+				async: false,
+				data: {commandID: '0x72', fileName: 'aaaa'},
+				success: function(result) {
+console.log(JSON.stringify(result));
+				}
+			});
+
 			});
 		} else if( currentStatus == CLOCKED_IN) {
 			// show buttons 1, 3, 4 - Scan Bundle, Off Standard, Clock Out

@@ -6,11 +6,19 @@ html {
 	
 }
 
+#close {
+	position: fixed;
+	top: 60px;
+	cursor: pointer;
+}
+	#close > img {
+		height: 30px;
+	}
+
 #site-wrapper {
 	width: 1400px;
 	margin: 20px auto 20px auto;
 	height: 900px;
-	border: red 1px solid;
 	padding: 0 10px 0 10px;
 }
 
