@@ -1,0 +1,216 @@
+/* reset */
+@import url("reset.css");
+
+html {
+	font-family: calibri;
+	
+}
+
+#site-wrapper {
+	width: 1400px;
+	margin: 20px auto 20px auto;
+	height: 900px;
+	border: red 1px solid;
+	padding: 0 10px 0 10px;
+}
+
+#header {
+	width: 100%;
+	text-align: center;
+	float: left;
+}
+	#header p, #header img {
+		display: inline-block;
+	}
+	#header p {
+		font-size: 28px;
+		font-weight: bold;
+	}
+	#header img {
+		float: right;
+		margin-top: 25px;
+	}
+	
+	#header-title {
+		color: white;
+		background-color: #3976bf;
+		padding: 5px 15px;
+		box-shadow: 4px 4px 4px #888888;
+		margin-right: 150px;
+		border: 1px solid #BFBFBF;
+
+	}
+	#header-status-title {
+	}
+	#header-status {
+		color: black;
+		background-color: #f2f2f2;
+		padding: 5px 15px;
+		box-shadow: 4px 4px 4px #888888;
+		width: 230px;
+		margin-left: 20px;
+		border: 1px solid #bfbfbf;
+	}
+
+#button-row {
+	width: 100%;
+	float: left;
+	text-align: center;
+}
+	#button-row .button-holder {
+		display: inline-block;
+	}
+	
+#bundle-status {
+	width: 100%;
+	float: left;
+	text-align: center;
+	background-color: #c4bd97;
+	padding: 10px 0 17px 0;
+	font-size: 18px;
+	box-shadow: 4px 4px 4px #888888;
+}
+	#bundle-status .bundle-status-wrapper {
+		margin: 13px 33px 0 0;
+		display: inline-block;
+	}
+		#bundle-status .bundle-status-wrapper p {
+			float: left;
+			margin: 7px 10px 0 0;
+		}
+		#bundle-status .bundle-status-wrapper input {
+			float: left;
+			padding: 5px;
+		}
+		#bundle-status #cut-no input {
+			width: 100px;
+		}
+		#bundle-status #style input {
+			width: 100px;
+		}
+		#bundle-status #bundle-no input {
+			width: 100px;
+		}
+		#bundle-status #description input {
+			width: 400px;
+		}
+		
+#plies {
+	float: left;
+	width: 100%;
+	margin-top: 20px;
+}
+	#plies img {
+		width: 700px;
+		float: left;
+		border: 2px solid #3976bf;
+	}
+	
+	#plies-status {
+		float: left;
+		width: 665px;
+		background-color: #dcfdad;
+		padding: 10px;
+		box-shadow: 4px 4px 4px #888888;
+		margin-left: 10px;
+	}
+		#plies-status-left {
+			width: 50%;
+			float: left;
+		}
+		#plies-status-right {
+			width: 50%;
+			float: left;
+		}
+		
+	.plies-status-wrapper {
+		float: left;
+		margin-bottom: 10px;
+	}
+		.plies-status-wrapper p  {
+			float: left;
+			margin: 3px 15px 0;
+			width: 100px;
+		}
+		
+#operator-status-wrapper {
+	width: 100%;
+	float: left;
+	text-align: center;
+	margin-top: 30px;
+}
+	#operator-status {
+		background-color: #95b3d7;
+		padding: 10px 0px 20px 10px;
+		margin: auto;
+		width: 650px;
+		text-align: center;
+		border: 1px solid blue;
+		box-shadow: 4px 4px 4px #888888;
+	}
+		.operator-status-field {
+			float: left;
+			margin-right: 10px;
+		}
+		
+		.operator-status-field p {
+			color: black;
+			margin-bottom: 5px;
+		}
+		
+		.operator-status-field input {
+			background-color: #4f81bd;
+			border: #4f81bd;
+			color: white;
+			border: 1px solid blue;
+			padding: 5px;
+		}
+		.operator-status-field.operator-name {
+			text-align: left;
+		}
+		.operator-status-field.operator-time input {
+			width: 125px;
+			text-align: center;
+		}
+
+.button {
+	cursor: pointer;
+}
+
+#button-maintenance {
+	cursor: pointer;
+}
+	#button-maintenance:active {
+		margin-top: 27px;
+	}
+
+.button:active {
+	box-shadow: 2px 2px 1px 1px gray;
+	outline: none;	
+}
+
+.button-holder {
+	margin: 20px;
+	width: 280px;
+	text-align: center;
+}
+
+	.button-holder h2 {
+		margin: 5px 0 0 0;
+	}
+
+.float-left {
+	float: left;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.clearer {
+	clear: both;
+}
+
+.error {
+	border: 1px solid red;
+}

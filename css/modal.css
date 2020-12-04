@@ -1,0 +1,110 @@
+	#modal {
+		position: absolute;
+		top: -20px;
+		bottom: -20px;
+		left: 0;
+		right: 0;
+		background-color: rgba(117, 117, 117, 0.6);
+		display: none;
+		z-index: 200;
+	}
+		
+		#modal .container {
+			position: fixed;
+			margin: auto;
+			width: 400px;
+			top: 200px;
+			height: 200px;
+			left: 0;
+			right: 0;
+			background-color: #2e110d;			
+			border: 3px solid #41f0c09;
+			text-align: center;
+			padding: 10px;
+		}
+		
+	#modal-content {
+		margin-top: 0px;
+		position: relative;
+		font-size: 20px;
+		font-weight: bold;
+		color:#fff;
+		padding: 20px 50px;
+		line-height:30px;
+		
+	}
+		#modal-title {
+			position: absolute;
+			font-size: 32px;
+			top: -34px;
+			left: 0px;
+		}
+		
+	.modal-button {
+		margin: 10px 30px 0 20px;
+	}
+	.modal-button.cancel {
+		margin-left: 80px;
+	}
+
+	#modal .container a.close_modal {
+		position: absolute;
+		top: 8px;
+		right: 8px;
+	}
+	
+	/* barcode */
+	#user-login-barcode {
+	}
+	
+	button#modal-cancel {
+		margin-left: 80px;
+	}
+	
+	button.maint-enter {
+		margin-left: 180px;
+	}
+	
+	.barcode-input {
+		padding: 10px;
+		font-size: 24px;
+	}
+	
+	p.maint-label {
+		clear: both;
+		float: left;
+		width: 325px;
+		margin: 0 0 20px 0;
+	}
+	
+	input.maint-input {
+		float: left;
+		width: 150px;
+		padding: 5px;
+		margin: 0px;
+	}
+	
+	p#wrapper-os {
+		text-align: left;
+		margin-left: 120px;
+	}
+	input.input-os {
+		margin-right: 5px;
+	}
+	label.label-os {
+		margin-right: 20px;
+		font-size: 26px;
+		cursor: pointer;
+	}
+		label.label-os.last {
+			margin-right: 0px;
+		}
+		
+	td.center, th.center {
+		text-align: center;
+	}
+
+
+
+
+	

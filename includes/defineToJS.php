@@ -1,0 +1,20 @@
+<?php
+	echo '
+		<script>
+				const BROWSER_AJAX = "'.BROWSER_AJAX.'";
+				const BROWSER_ROOT = "'.BROWSER_ROOT.'";
+				const BROWSER_IMAGES = "'.BROWSER_IMAGES.'";
+				const BROWSER_JS = "'.BROWSER_JS.'";
+				const BROWSER_CSS = "' . BROWSER_CSS . '";
+				
+				const AJAX_STATUS_FAIL = '.AJAX_STATUS_FAIL.';
+				const AJAX_STATUS_OK = '.AJAX_STATUS_OK.';
+				const AJAX_STATUS_INVALID_PARAMS_BUNDLE = '.AJAX_STATUS_INVALID_PARAMS_BUNDLE.';
+				
+				const FILE_NO_ERROR = '.FILE_NO_ERROR.';
+				const FILE_INVALID_TYPE = '.FILE_INVALID_TYPE.';
+				const FILE_TRANSFER_FAIL = '.FILE_TRANSFER_FAIL.';
+				const FILE_MISSING_FILE = '.FILE_MISSING_FILE.';
+				const FILE_SYSTEM_ERROR = '.FILE_SYSTEM_ERROR.';
+		</script>';	
+?>
