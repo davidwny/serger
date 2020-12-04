@@ -37,6 +37,7 @@
 	define("BROWSER_ROOT", HOST_PROTOCOL . $_SERVER["HTTP_HOST"] . DS . SUBDIR);
 	define("BROWSER_CSS", BROWSER_ROOT . "css" . DS);
 	define("BROWSER_IMAGES", BROWSER_ROOT . "images" . DS);
+	define("BROWSER_AUDIO", BROWSER_ROOT . "audio" . DS);
 	define("BROWSER_AJAX", BROWSER_ROOT . "ajax" . DS);
 	define("BROWSER_JS", BROWSER_ROOT . "js" . DS);
 	define("BROWSER_INCLUDES", BROWSER_ROOT . "includes" . DS);
