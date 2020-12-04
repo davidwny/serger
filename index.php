@@ -156,6 +156,6 @@ console.dir(sessionStorage);
 				</a>
 			</div>
 		</div>
-		<audio id="button-sound"><source src="<?= BROWSER_IMAGES; ?>buttonClick.mp3" type="audio/mp3"></audio>
+		<audio id="button-sound"><source src="<?= BROWSER_IMAGES; ?>buttonClickShort.mp3" type="audio/mp3"></audio>
 	</body>
 </html> 

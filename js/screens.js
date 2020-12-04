@@ -68,15 +68,16 @@ var screens = {
 			screens.showOperatorInfo( sessionStorage.maint );
 			
 			// bind IP address
-			$('.button-1').unbind().click(function() {
+			$('.button-1').click(function() {
+				audioClick.play();
 				modal.ipModal();
 			});
 			
 			// bind report buttons
-			$('.button-2').unbind().click(function() {
+			$('.button-2').click(function() {
 				modal.reportModal( "Robot" );
 			});
-			$('.button-3').unbind().click(function() {
+			$('.button-3').click(function() {
 				modal.reportModal( "Serger" );
 			});
 
@@ -107,8 +108,7 @@ var screens = {
 			// bind event to button
 			// show user ID input
 			// focus to input...give instructions to scan barcode
-			$('.button-1').unbind().click(function() {
-				audioClick.play();
+			$('.button-1').click(function() {
 				modal.showModalLogin();
 			});
 		} else if( currentStatus == CLOCKED_IN) {
@@ -131,18 +131,18 @@ var screens = {
 			// bind event to button
 			// show user ID input
 			// bind event for going off standard
-			$('.button-2').unbind().click(function() {
+			$('.button-2').click(function() {
 				modal.offStandard();
 			});
 			
 			// focus to input...give instructions to scan barcode
-			$('.button-3').unbind().click(function() {
+			$('.button-3').click(function() {
 				this.currentStatus = OFF;
 				screens.configScreen( this.currentStatus );
 			});
 
 			// bind event to scan bundle-status
-			$('.button-1').unbind().click(function() {
+			$('.button-1').click(function() {
 				modal.scanBundle();
 			});
 		} else if( currentStatus == SCANNED ) {
@@ -159,13 +159,13 @@ var screens = {
 			$('#operator-status-wrapper').show();
 			
 			// bind event to return
-			$('.button-2').unbind().click(function() {
+			$('.button-2').click(function() {
 				screens.currentStatus = CLOCKED_IN;
 				screens.configScreen( screens.currentStatus );
 			});
 			
 			// bind event to scan bundle-status
-			$('.button-1').unbind().click(function() {
+			$('.button-1').click(function() {
 				screens.currentStatus = LOADED;
 				screens.configScreen( screens.currentStatus );
 			});
@@ -183,13 +183,13 @@ var screens = {
 			$('#operator-status-wrapper').show();
 
 			// bind event to start serging
-			$('.button-1').unbind().click(function() {
+			$('.button-1').click(function() {
 				screens.currentStatus = RUNNING;
 				screens.configScreen( screens.currentStatus );
 			});
 			
 			// bind event to return
-			$('.button-2').unbind().click(function() {
+			$('.button-2').click(function() {
 				screens.currentStatus = SCANNED;
 				screens.configScreen( screens.currentStatus );
 			});
@@ -206,7 +206,7 @@ var screens = {
 			$('#operator-status-wrapper').show();
 
 			// bind modal for error reporting
-			$('.button-1').unbind().click(function() {
+			$('.button-1').click(function() {
 				// hooks for stopping robot and serger
 								
 				screens.currentStatus = STOPPED;
@@ -233,12 +233,12 @@ var screens = {
 			$('#plies-status').show();
 			$('#operator-status-wrapper').show();
 
-			$('.button-1').unbind().click(function() {
+			$('.button-1').click(function() {
 				screens.currentStatus = RUNNING;
 				screens.configScreen( screens.currentStatus );
 			});
 			
-			$('.button-2').unbind().click(function() {
+			$('.button-2').click(function() {
 				screens.currentStatus = CLOCKED_IN;
 				screens.configScreen( screens.currentStatus );
 			});
@@ -254,7 +254,7 @@ var screens = {
 			// show button 3
 			$('.button-3 h2').html('Return to Standard');
 			$('.button-3').show();
-			$('.button-3').unbind().click(function() {
+			$('.button-3').click(function() {
 				this.currentStatus = CLOCKED_IN;
 				screens.configScreen( this.currentStatus );				
 			});
@@ -408,7 +408,11 @@ var screens = {
 	},
 	
 	resetScreen: function() {
-		$('.button-holder').hide();
+		$('.button-holder').unbind().hide();
+		$('.button-holder').click(function() {
+			audioClick.play();
+		});
+		
 		$('#bundle-status').hide();
 		$('#plies').hide();
 		$('#operator-status-wrapper').hide();
