@@ -22,6 +22,12 @@
 	
 	put_ini_file( SERVER_CONFIG_FILE, configClass::$configArray );
 	
+	// write out rosIP?
+	$fileRosIP = configClass::readIPFile();
+	if( $fileRosIP != $rosIP ) {
+		configClass::writeIPFile( $rosIP );
+	}
+	
 	$returnVal['status'] = AJAX_STATUS_OK;
 	echo json_encode($returnVal);
 	exit();

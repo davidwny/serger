@@ -93,6 +93,16 @@
 				return FALSE;
 			}
 		}
+		
+		public static function readIPFile() {
+			$rosIP = trim(file_get_contents( SERVER_ROOT . 'robotIpAddress' ));
+			return $rosIP;
+		}
+		
+		public static function writeIPFile( $rosIP ) {
+			$rosIP = file_put_contents( SERVER_ROOT . 'robotIpAddress', $rosIP );
+			return $rosIP;
+		}
 	}
 	
 	function put_ini_file( $file, $configArray, $i = 0 ){
@@ -110,5 +120,7 @@
 		else
 			return $str;
 	}
+	
+
 
 ?>
