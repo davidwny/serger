@@ -108,18 +108,18 @@ var screens = {
 			// show user ID input
 			// focus to input...give instructions to scan barcode
 			$('.button-1').click(function() {
-//				modal.showModalLogin();
-
+				modal.showModalLogin();
+/*
 			$.ajax({
-				url: 'ros.exe',
+				url: 'ros.cgi',
 				dataType: 'json',
 				method: 'POST',
 				async: false,
-				data: {commandID: '0x72', fileName: 'aaaa'},
+				data: {commandID: '0x72'},
 				success: function(result) {
-console.log(JSON.stringify(result));
 				}
 			});
+*/
 
 			});
 		} else if( currentStatus == CLOCKED_IN) {

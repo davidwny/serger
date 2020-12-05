@@ -36,7 +36,9 @@
 				// init config array
 				config.getConfigFromFile();
 				
-				audioClick = document.getElementById("button-sound"); 
+				audioClick = document.getElementById("button-sound");
+				audioClick.volume = 0.0;
+				
 console.dir(sessionStorage);
 			});
 		</script>
