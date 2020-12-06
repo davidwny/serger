@@ -9,6 +9,7 @@ const STOPPED = 6;
 const OFF_STANDARD = 7;
 const SERGER_RESUME = 8;
 const MAINT_LOGIN = 9;
+const SERGER_PORT = '58082';
 
 const TWELVEHOUR = true;
 const TWENTYFOURHOUR = false;
@@ -111,15 +112,15 @@ var screens = {
 				modal.showModalLogin();
 /*
 			$.ajax({
-				url: 'ros.cgi',
-				dataType: 'json',
-				method: 'POST',
+				url: BROWSER_AJAX + 'sendSergerCommand.php',
+				method: 'GET',
 				async: false,
-				data: {commandID: '0x72'},
+				data: {ip: localStorage.WGC_0_sergerIP + ":" + SERGER_PORT, p: 'abcd'},
 				success: function(result) {
 				}
 			});
 */
+
 
 			});
 		} else if( currentStatus == CLOCKED_IN) {
@@ -345,6 +346,16 @@ var screens = {
 							imageURL += '_back.png';							
 						}
 						$('#plies img').attr('src', imageURL);
+						
+						// setup serger
+						$.ajax({
+							url: BROWSER_AJAX + 'sendSergerCommand.php',
+							method: 'GET',
+							async: false,
+							data: {ip: localStorage.WGC_0_sergerIP + ":" + SERGER_PORT, p: result.sewprog},
+							success: function(result) {
+							}
+						});
 
 						// save bundle info
 						sessionStorage.bundleID = $('#bundle-barcode').val();

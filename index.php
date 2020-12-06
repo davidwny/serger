@@ -1,9 +1,5 @@
 <?php
 	require_once('init.php');
-	
-//	echo errorLogClass::insertErrorRecord( '91', '12345', '1234', 1, "Serger", "This is a test" );
-//	echo "<pre>";
-//	echo print_r(errorLogClass::getErrorRecords( "Serger", "ASC" )) . "</pre>";
 
 ?>
 <!DOCTYPE html>
