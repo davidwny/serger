@@ -49,6 +49,7 @@
 			$returnVal['desc'] = $bundleRow['ITMDATA1'];
 			$returnVal['bundle'] = $bundleRow['BUNNUM'];
 			$returnVal['bunqty'] = $bundleRow['bunqty'];
+			$returnVal['sewprog'] = $bundleRow['SEWPROGRAM'];
 		}
 		
 	}

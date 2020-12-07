@@ -15,7 +15,6 @@ var config = {
 			async: false,
 			success: function(response) {
 				if( response.status == AJAX_STATUS_OK) {
-console.dir(response.config.WGC_0);
 					// WGC_0 only at this time
 					localStorage.WGC_0_rosIP = response.config.WGC_0.rosIP;
 					localStorage.WGC_0_sergerIP = response.config.WGC_0.sergerIP;
@@ -39,6 +38,20 @@ console.dir(response.config.WGC_0);
 				}
 			}
 		});
+	},
+	
+	sendSergerCommand: function( params ) {
+		$.ajax({
+			url: BROWSER_AJAX + 'sendSergerCommand.php',
+			type: 'get',
+			data: { p: params },
+			success: function(response) {
+				if( response.status == AJAX_STATUS_OK) {
+
+				}
+			}
+		});		
+		
 	}
 	
 }
