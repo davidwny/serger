@@ -48,6 +48,9 @@
 	// Default DB select
 	define('DEFAULT_DB_SELECT', 'ipro');
 	
+	// version
+	define( 'VERSION', '1.0');
+	
 	// define for file transfers
 	define('FILE_NO_ERROR', 0);
 	define('FILE_INVALID_TYPE', 1);

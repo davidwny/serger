@@ -50,7 +50,7 @@ console.dir(sessionStorage);
 				<p id="header-title">Robotic Serger Control Panel</p>
 				<p id="header-status-title">Status:</p>
 				<p id="header-status">Bundle Scanned</p>
-				<img id="button-maintenance" src="<?= BROWSER_IMAGES; ?>maintenance.png" onclick="modal.showMaintModalLogin()">
+				<img id="button-maintenance" src="<?= BROWSER_IMAGES; ?>maintenance.png" onclick="modal.showMaintModalLogin()" title="Ver <?= VERSION; ?>">
 			</div>
 			<div id="button-row">
 				<div class="button-holder button-1">
