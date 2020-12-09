@@ -6,7 +6,6 @@
 	$params = $_GET['p'];
 	$ip = $_GET['ip'];
 
-
 	// create curl resource
 	$ch = curl_init();
 

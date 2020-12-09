@@ -1,0 +1,57 @@
+
+<html>
+<head>
+<title>ROS Comms Test</title>
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+		
+<script>
+
+$(function() {
+	$( "#form" ).submit(function( event ) {
+		//alert( "Handler for .submit() called." );
+		event.preventDefault();
+		$.ajax({
+			url: "/ros.exe",
+			method: "POST",
+			data: {
+				commandID: $("#form :input[name='commandID']")[0].value,
+				fileName: $("#form :input[name='fileName']")[0].value
+				},
+			dataType: "json",
+			success: function( result ) {
+				console.log ( result );
+				document.getElementById("reply").innerHTML = JSON.stringify(result);
+			}
+		});
+		return false;
+	});
+	$("#head").click(function() {
+		$.ajax({
+			url: 'ros.exe',
+			dataType: 'json',
+			type: 'post',
+			async: false,
+			data: {commandID: 0x72},
+			success: function(result) {
+
+			}
+			});
+	});
+});
+</script>
+
+</head>
+<body>
+	<h2 id='head'>ROS Comms Test</h2>
+	<form id='form'  method = 'GET'>
+		<label for = 'commandID'>Command ID : </label><br>
+		<input name = 'commandID' type = 'text'><br>
+		<label for = 'fileName'>File name : </label><br>
+		<input name = 'fileName' type = 'text'><br>
+		<input name = 'submit' type = 'submit'><br>
+	</form>
+	<div id='reply'></div>
+	
+</body>
+</html>

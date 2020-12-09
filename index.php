@@ -19,6 +19,7 @@
 		<script src="<?= BROWSER_JS; ?>validation.js"></script>
 		<script src="<?= BROWSER_JS; ?>config.js"></script>
 		<script src="<?= BROWSER_JS; ?>maint.js"></script>
+		<script src="<?= BROWSER_JS; ?>robot.js"></script>
 
 		<script>
 			var audioClick = {}; 
@@ -62,6 +63,46 @@ console.dir(sessionStorage);
 					<h2>Off Standard</h2>
 				</div>
 				<div class="button-holder button-4">
+					<img class="button" src="<?= BROWSER_IMAGES; ?>clockinout.png">
+					<h2>Clock Out</h2>
+				</div>
+				<div class="button-holder button-5">
+					<img class="button" src="<?= BROWSER_IMAGES; ?>clockinout.png">
+					<h2>Clock Out</h2>
+				</div>
+				<div class="button-holder button-6">
+					<img class="button" src="<?= BROWSER_IMAGES; ?>clockinout.png">
+					<h2>Clock Out</h2>
+				</div>
+				<div class="button-holder button-7">
+					<img class="button" src="<?= BROWSER_IMAGES; ?>clockinout.png">
+					<h2>Clock Out</h2>
+				</div>
+				<div class="button-holder button-8">
+					<img class="button" src="<?= BROWSER_IMAGES; ?>clockinout.png">
+					<h2>Clock Out</h2>
+				</div>
+				<div class="button-holder button-9">
+					<img class="button" src="<?= BROWSER_IMAGES; ?>clockinout.png">
+					<h2>Clock Out</h2>
+				</div>
+				<div class="button-holder button-10">
+					<img class="button" src="<?= BROWSER_IMAGES; ?>clockinout.png">
+					<h2>Clock Out</h2>
+				</div>
+				<div class="button-holder button-11">
+					<img class="button" src="<?= BROWSER_IMAGES; ?>clockinout.png">
+					<h2>Clock Out</h2>
+				</div>
+				<div class="button-holder button-12">
+					<img class="button" src="<?= BROWSER_IMAGES; ?>clockinout.png">
+					<h2>Clock Out</h2>
+				</div>
+				<div class="button-holder button-13">
+					<img class="button" src="<?= BROWSER_IMAGES; ?>clockinout.png">
+					<h2>Clock Out</h2>
+				</div>
+				<div class="button-holder button-14">
 					<img class="button" src="<?= BROWSER_IMAGES; ?>clockinout.png">
 					<h2>Clock Out</h2>
 				</div>

@@ -64,6 +64,16 @@ var screens = {
 			screens.setButton('2', 'Robot Error report', 'loadbundle.png');
 			screens.setButton('3', 'Serger Error Report', 'sergererror.png');
 			screens.setButton('4', 'Maintenance Clock Out', 'clockinout.png');
+			screens.setButton('5', 'Robot Get Status', 'loadbundle.png');
+			screens.setButton('6', 'Robot INITVALVES', 'loadbundle.png');
+			screens.setButton('7', 'Robot MOVENEUTRAL', 'loadbundle.png');
+			screens.setButton('8', 'Robot MOVETOPICK', 'loadbundle.png');
+			screens.setButton('9', 'Robot PICKPANEL', 'loadbundle.png');
+			screens.setButton('10', 'Robot PEEL', 'loadbundle.png');
+			screens.setButton('11', 'Robot DRAPE', 'loadbundle.png');
+			screens.setButton('12', 'Robot TEACH34BACK', 'loadbundle.png');
+			screens.setButton('13', 'Robot UNLOAD', 'loadbundle.png');
+			screens.setButton('14', 'Robot MAIN1', 'loadbundle.png');
 			
 			// init operator info
 			screens.showOperatorInfo( sessionStorage.maint );
@@ -96,6 +106,57 @@ var screens = {
 				screens.configScreen( screens.currentStatus );
 			});
 			
+			// robot test buttons
+			$('.button-5').click(function() {
+				robot.sendRobotCommand( ROBOT_STATUS );
+			});
+
+			$('.button-6').click(function() {
+				robot.sendRobotCommand( ROBOT_JOB_SELECT, 'INITVALVES' );
+				robot.sendRobotCommand( ROBOT_JOB_START );
+			});
+
+			$('.button-7').click(function() {
+				robot.sendRobotCommand( ROBOT_JOB_SELECT, 'MOVENEUTRAL' );
+				robot.sendRobotCommand( ROBOT_JOB_START );
+			});
+
+			$('.button-8').click(function() {
+				robot.sendRobotCommand( ROBOT_JOB_SELECT, 'MOVETOPICK' );
+				robot.sendRobotCommand( ROBOT_JOB_START );
+			});
+
+			$('.button-9').click(function() {
+				robot.sendRobotCommand( ROBOT_JOB_SELECT, 'PICKPANEL' );
+				robot.sendRobotCommand( ROBOT_JOB_START );
+			});
+
+			$('.button-10').click(function() {
+				robot.sendRobotCommand( ROBOT_JOB_SELECT, 'PEEL' );
+				robot.sendRobotCommand( ROBOT_JOB_START );
+			});
+
+			$('.button-11').click(function() {
+				robot.sendRobotCommand( ROBOT_JOB_SELECT, 'DRAPE' );
+				robot.sendRobotCommand( ROBOT_JOB_START );
+			});
+
+			$('.button-12').click(function() {
+				robot.sendRobotCommand( ROBOT_JOB_SELECT, 'TEACH34BACK' );
+				robot.sendRobotCommand( ROBOT_JOB_START );
+			});
+
+			$('.button-13').click(function() {
+				robot.sendRobotCommand( ROBOT_JOB_SELECT, 'UNLOAD' );
+				robot.sendRobotCommand( ROBOT_JOB_START );
+			});
+
+			$('.button-14').click(function() {
+				robot.sendRobotCommand( ROBOT_JOB_SELECT, 'MAIN1' );
+				robot.sendRobotCommand( ROBOT_JOB_START );
+			});
+
+			
 		} else if( currentStatus == OFF ) {			
 			// reset screen
 			screens.setHeader( currentStatus );
@@ -110,18 +171,6 @@ var screens = {
 			// focus to input...give instructions to scan barcode
 			$('.button-1').click(function() {
 				modal.showModalLogin();
-/*
-			$.ajax({
-				url: BROWSER_AJAX + 'sendSergerCommand.php',
-				method: 'GET',
-				async: false,
-				data: {ip: localStorage.WGC_0_sergerIP + ":" + SERGER_PORT, p: 'abcd'},
-				success: function(result) {
-				}
-			});
-*/
-
-
 			});
 		} else if( currentStatus == CLOCKED_IN) {
 			// show buttons 1, 3, 4 - Scan Bundle, Off Standard, Clock Out
@@ -291,7 +340,7 @@ var screens = {
 					if(result.status == AJAX_STATUS_OK) {
 						sessionStorage.userID = result.id;
 						sessionStorage.name = result.name;
-						sessionStorage.maint = result.maint;
+//						sessionStorage.maint = result.maint;
 						
 						screens.currentStatus = CLOCKED_IN;
 						modal.closeModal();

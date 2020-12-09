@@ -38,20 +38,5 @@ var config = {
 				}
 			}
 		});
-	},
-	
-	sendSergerCommand: function( params ) {
-		$.ajax({
-			url: BROWSER_AJAX + 'sendSergerCommand.php',
-			type: 'get',
-			data: { p: params },
-			success: function(response) {
-				if( response.status == AJAX_STATUS_OK) {
-
-				}
-			}
-		});		
-		
-	}
-	
+	}	
 }
