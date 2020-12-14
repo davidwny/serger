@@ -246,6 +246,8 @@ var screens = {
 			// bind event to start serging
 			$('.button-1').click(function() {
 				screens.currentStatus = RUNNING;
+				robot.sendRobotCommand( ROBOT_JOB_SELECT, 'MAIN1' );
+				robot.sendRobotCommand( ROBOT_JOB_START );
 				screens.configScreen( screens.currentStatus );
 			});
 			

@@ -49,7 +49,7 @@
 	define('DEFAULT_DB_SELECT', 'ipro');
 	
 	// version
-	define( 'VERSION', '1.2');
+	define( 'VERSION', '1.3');
 	
 	// define for file transfers
 	define('FILE_NO_ERROR', 0);
